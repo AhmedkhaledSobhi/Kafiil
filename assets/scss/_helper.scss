@@ -1,0 +1,144 @@
+// 
+$step: 10; // Set the increment value
+
+/*----- margin-top -------- */
+
+  @for $i from 0 through 5 {
+    $margin-top: $i * $step;
+
+    .mt-#{$i} {
+      margin-top: #{$margin-top}px;
+    }
+  } 
+
+/*----- margin-bottom -------- */
+
+  @for $i from 0 through 5 {
+    $margin-bottom: $i * $step;
+
+    .mb-#{$i} {
+      margin-bottom: #{$margin-bottom}px;
+    }
+  }
+
+/*----- margin-left -------- */
+
+  @for $i from 0 through 5 {
+    $margin-left: $i * $step;
+
+    .ml-#{$i} {
+      margin-left: #{$margin-left}px;
+    }
+  }
+
+/*----- margin-right -------- */
+
+@for $i from 0 through 5 {
+    $margin-right: $i * $step;
+
+    .mr-#{$i} {
+      margin-right: #{$margin-right}px;
+    }
+  }
+
+/*----- margin-x -------- */
+
+@for $i from 0 through 5{
+    $margin-x:$i * $step;
+    .mx-#{$i}{
+        margin-right: #{$margin-x}px;
+        margin-left: #{$margin-x}px;
+
+    }
+}
+
+/*----- margin-y -------- */
+
+@for $i from 0 through 5 {
+    $margin-y :$i * $step;
+    .my-#{$i}{
+        margin-top: #{$margin-y}px;
+        margin-bottom: #{$margin-y}px;
+    }
+}
+
+
+// ========================================
+
+
+
+
+/*----- padding-top -------- */
+
+@for $i from 0 through 5 {
+    $padding-top: $i * $step;
+
+    .pt-#{$i} {
+      padding-top: #{$padding-top}px;
+    }
+  } 
+
+/*----- padding-bottom -------- */
+
+  @for $i from 0 through 5 {
+    $padding-bottom: $i * $step;
+
+    .pb-#{$i} {
+      padding-bottom: #{$padding-bottom}px;
+    }
+  }
+
+/*----- padding-left -------- */
+
+  @for $i from 0 through 5 {
+    $padding-left: $i * $step;
+
+    .pl-#{$i} {
+      padding-left: #{$padding-left}px;
+    }
+  }
+
+/*----- padding-right -------- */
+
+@for $i from 0 through 5 {
+    $padding-right: $i * $step;
+
+    .pr-#{$i} {
+      padding-right: #{$padding-right}px;
+    }
+  }
+
+/*----- padding-x -------- */
+
+@for $i from 0 through 5{
+    $padding-x:$i * $step;
+    .px-#{$i}{
+        padding-right: #{$padding-x}px;
+        padding-left: #{$padding-x}px;
+
+    }
+}
+
+/*----- padding-y -------- */
+
+@for $i from 0 through 5 {
+    $padding-y :$i * $step;
+    .py-#{$i}{
+        padding-top: #{$padding-y}px;
+        padding-bottom: #{$padding-y}px;
+    }
+}
+
+// =============================================================================
+
+
+/* Create Grid System */
+
+
+$grid_Cols:12;
+
+@for $i from 1 through $grid_Cols {
+    .col-#{$i}{
+        width: percentage($i/$grid_Cols );
+    }
+}

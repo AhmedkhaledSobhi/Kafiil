@@ -1,0 +1,88 @@
+/* ------------------------------------------------------------------
+    All Variables Defined - Value Change with Your's Need
+ -------------------------------------------------------------------- */
+$white: #ffffff;
+$gray:#8692A6;
+$red: #FF8888;
+$base: #1085A9;
+$black:#000000;
+$blue: #01A0E1;
+$pink: #FF681B;
+$info: #FAA21A;
+$green: #3FAD48;
+$primary: rgba(168, 233, 77, 0.616);
+$secondary: #F47102;
+
+// Theme Color - Defualt Colors
+$textcolor: #8692A6;
+$heading-color: #ffcb31;
+$third-color: rgba(37, 105, 215, 0.1);
+$theme-color:#9b93916b;
+$second-color: #1dbf73 ;
+
+
+$box-shadow: 0px 15px 40px 0px rgba(109, 109, 109, 0.06);
+
+$sticky-bg-1: $theme-color;
+$sticky-bg-2: $third-color;
+
+$font-family:'Montserrat' , sans-serif;
+
+/* @ mixin */
+
+@mixin border-radius($r) {
+    border-radius: $r;
+}
+
+@mixin transition($transition) {
+    transition: all $transition ease-in-out;
+}
+
+@mixin transform($transform) {
+    transform: $transform;
+}
+
+@mixin coverbg {
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-size: cover !important;
+}
+
+@mixin font ($size:16px ,$weight:400,$height:23px){
+    font-size: $size;
+    font-weight: $weight;
+    line-height: $height ;
+    // font-family : $famile ;
+}
+@mixin font-size($size: 16px) {
+    font-size: $size;
+}
+
+
+@mixin overlay($color, $opacity) {
+    z-index: 1;
+    position: relative;
+
+    &::before {
+        top: 0;
+        left: 0;
+        z-index: -1;
+        width: 100%;
+        height: 100%;
+        content: '';
+        position: absolute;
+        background: rgba($color, $opacity);
+        @include transition(.3s);
+    }
+}
+
+
+@function calculateRem($size) {
+    $rem-size: $size / 16px;
+    @return $rem-size * 1rem;
+}
+
+
+
+
+

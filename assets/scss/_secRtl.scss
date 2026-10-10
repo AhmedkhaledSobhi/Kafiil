@@ -1,0 +1,200 @@
+#user{
+    @include transition (2s);
+    .details-User {
+        background-color: $white;
+        padding: 20px;
+        margin: 25px auto;
+        border-radius: 10px;
+    
+        .rait-star {
+            i {
+                color: $textcolor;
+                &:nth-child(-n+4){
+                    color: $heading-color;
+                }
+            }
+        }
+    
+        .item {
+            padding: 15px;
+            border-radius: 10px;
+            background-color: rgba(209, 207, 207, 0.534);
+        }
+        p {
+            @include font (14px ,500, 16.8px);
+            letter-spacing: 0.5%;
+            color: $textcolor;
+            text-align: left;
+            margin:5 8px;
+        }
+        button {
+            background-color: $second-color;
+            color: $white;
+            width: 100%;
+            padding: 5px 25px;
+            margin: 15px  auto;
+            border-radius: 10px;
+        }
+    }
+
+    /* ---------------- info --------- */
+    #info {
+        background-color: $white;
+        border-radius: 8px;
+        padding: 15px 25px;
+        margin: 10px auto;
+        h3 {
+            @include font (16px ,600 19.2px);
+            letter-spacing: 0.08px;
+        }
+        .body {
+            margin: 10px auto;
+            .item-info {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                padding: 5px 0;
+                span {
+                    @include font (14px ,500,16.8px);
+                    left: 0.07px;  
+                }
+                small {
+                    @include font (14px ,500,16.8px);
+                    left: 0.07px;
+                }
+            }
+        }
+    }
+    /* ---------------- share --------- */
+
+    #share{
+        background-color: $white;
+        border-radius: 10px;
+        padding: 15px;
+        margin: 20px auto;
+    
+        h3 {
+            @include font (16px ,600 ,19.2px);
+            letter-spacing: 0.08px;
+            margin-bottom: 15px;
+        }
+       
+        .icon{
+            display: flex;
+            justify-content: space-around;
+        }
+    }
+
+    /* -------------- sellerServices ----------- */
+
+    #sellerServices {
+        margin: 10px auto;
+        .head {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin: 10px auto;
+            h3 {
+                @include font (16px ,600 ,19.2px);
+                letter-spacing: 0.08px;
+            }
+            span {
+                a {
+                    text-decoration: none;
+                    color: $textcolor;
+                    @include font ( 14px ,500 ,16.8px);
+                    letter-spacing: 0.07px;
+                }
+            }
+        }
+
+        .card {
+            .card-body {
+                .card-title {
+                    @include font (12px ,600 ,14px);
+                    color: $black;
+                }
+                .footer-card {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    .rait {
+                        i {
+                            color: $heading-color;
+                        }
+                        small {
+                            @include font (13px ,500);
+                        }
+                    }
+                    .tag {
+                        i {
+                            color: $second-color;
+                        }
+                        small {
+                            @include font (14px ,600);
+                        }
+                    }
+                    .fav {
+                        cursor: pointer;
+                        i {
+                            color: $heading-color;
+                            &:hover {
+                                color: $second-color !important;
+                            }
+                        }
+                        
+                    }
+                }
+            }
+
+            @media (max-width :768px) {
+                .row
+                {
+                    flex-wrap: initial;
+                    width: 50%;
+                    .col-md-4 {
+                        width: 70% !important;
+                    }
+                    .col-md-8{
+                        width: 130% !important;
+                        max-width: 190% !important;
+                    }
+                    .card-body {
+                        align-items: center;
+                    }
+                } 
+            }
+        }
+    }
+}
+
+
+
+
+@media (max-width:768px) {
+    .detail {
+        cursor: pointer;
+        background-color: $theme-color;
+        color: $second-color;
+        position: fixed;
+        z-index: 999999999999999999;
+        top: 80px;
+        right: 5px;
+        width: 30px;
+        height: 30px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50%;
+    }
+    #user {
+        background-color: #f0f0f0;
+        position: absolute;
+        top: 0;
+        right: -100%;
+        border-bottom: 2px solid $black ;
+        border-radius: 8px;
+        padding: 5px 0 40px !important;
+    }
+    
+}

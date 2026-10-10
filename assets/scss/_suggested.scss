@@ -1,0 +1,106 @@
+#Suggested{
+    width: 100%;
+    margin: auto;
+    padding-left: 45px;
+    @media (max-width :768px) {
+        padding-left: 0px !important;
+        .head {
+            padding: 15px 0;
+        }
+
+        .card {
+            margin: 15px auto;
+        }
+    }
+    .head{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        h5 {
+            @include font (24px ,600 ,28.8px);
+            letter-spacing: 0.12px;
+        }
+        a {
+            text-decoration: none;
+            @include font (18px ,500 ,21.6px);
+            letter-spacing: 0.09px;
+            color: $textcolor !important;
+            @include transition (1s);
+            &:hover {
+                color: $second-color !important;
+            } 
+        }
+
+    }
+
+    .row {
+        margin-top: 20px;
+        .card {
+            position: relative;
+            @include transition (1s);
+            &:hover {
+                transform:rotate(2deg);
+            }
+            
+            .fav {
+                width: 45px;
+                height: 45px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                border-radius: 50%;
+                position: absolute;
+                top: 15px;
+                left: 10px;
+                background-color: $white;
+                cursor: pointer;
+                i {
+                    color: $heading-color;
+                }
+
+                &:hover {
+                    opacity: 0.7;
+                    i {
+                        color: $second-color !important;
+                    }
+                }
+            }
+            .card-body {
+                .card-text {
+                    padding: 15px 0;
+                    div {
+                        &:first-child {
+                            i {
+                                color: $heading-color !important;
+                            }
+                        }
+                        i {
+                            color: $textcolor !important;
+                        }
+                    }
+
+                    a {
+                        text-decoration: none !important;
+                        color: $textcolor;
+                    }
+                   
+                }
+
+                .footer-card {
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    h2 {
+                        font-feature-settings: 'clig' off, 'liga' off;
+                        @include font (12px,600,14px);
+                        margin-left: 10px;
+                    }
+                }
+            }
+            
+
+           
+            
+        }
+    }
+}

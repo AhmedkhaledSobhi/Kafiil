@@ -1,0 +1,184 @@
+.navbar {
+
+    .collapse {
+
+        .navbar-nav {
+
+            .nav-link {
+                text-align: center;
+                color: $gray !important;
+                margin: 0px 15px;
+                .nav-icon {
+                    left: 40%;
+                    padding: 20px 0px 15px;
+                    position: absolute;
+                    transform: translateY(-50%);
+                }
+                &:hover , a{
+                    color: $second-color !important;
+                }
+            }
+ 
+        }
+    }
+
+    .notfication {
+        width: 25px !important;
+        height: 25px !important;
+        display: flex;
+        align-items: center !important;
+        justify-content: center !important;
+        border-radius: 50%;
+        background-color: $second-color;
+        color: $white !important;
+        position: absolute;
+        top: 5px;
+        right: 10px;
+        padding: 8px !important;
+    }
+
+    /* The dropdown - the setting profile */
+    .dropdown-setting {
+        position: relative;
+        display: inline-block; 
+        a {
+            img {
+                border-radius: 50%;
+                border: 3px solid $second-color;
+            }
+        }
+            .dropdown-content-setting {
+                display: none;
+                top: 50px;
+                position: absolute;
+                width: 320px;
+                padding: 20px;
+                right: 0px;
+                background-color: #f9f9f9;
+                box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+                z-index: 1;
+                border-radius: 10px;
+
+                .setting-item  {
+                    color: $gray;
+                    margin: 10px 0;
+                    &:hover {
+                        color: $second-color;
+                    }
+                    a {
+                        color: $gray;
+                        text-decoration: none;
+                        &:hover {
+                            color: $second-color;
+                        }
+                    }
+                }
+
+                .card-footer {
+                    a {
+                        color: $red !important;
+                        text-decoration: none;
+                        &:hover  {
+                            color: $second-color !important;
+                        }
+                    }
+                }
+        
+                /* The switch - the box around the slider */
+                .switch {
+                    font-size: 17px;
+                    position: relative;
+                    display: inline-block;
+                    width: 2.5em;
+                    height: 1em;
+                    input {
+                        opacity: 0;
+                        width: 0;
+                        height: 0;
+                        &:checked + .slider{
+                            background:$second-color ;   
+                        }
+                        &:checked + .slider:before {
+                            transform: translateX(1.6em);
+                        }
+                    }
+
+                    /* The slider */
+                    .slider {
+                        position: absolute;
+                        cursor: pointer;
+                        inset: 0;
+                        background-color: $primary;
+                        border-radius: 50px;
+                        transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+                            &::before {
+                                position: absolute;
+                                content: "";
+                                display: flex;
+                                align-items: center;
+                                justify-content: center;
+                                height: 1em;
+                                width: 1em;
+                                inset: 0;
+                                background-color: white;
+                                border-radius: 50px;
+                                box-shadow: 0 10px 20px rgba(0,0,0,0.4);
+                                transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+                            }
+                    }
+                }
+                
+            } 
+
+            &:hover .dropdown-content-setting{
+                display: block !important;
+            }   
+    }
+   
+    
+
+
+    @media (max-width: 768px) {
+
+        .position-relative {
+            .nav-link {
+                display:flow-root !important;
+                // padding: 10p;
+                .nav-icon {
+                    top: 0px;
+                    left: 47% !important;
+                }
+                span {
+                    margin: 30px !important;
+                }
+            }
+        }
+        .container {
+            svg{
+                width: 50% !important;
+            }
+        }
+
+        .notfication-collaps {
+            .navbar-nav {
+                flex-direction: row;
+                width: 330px !important;
+                justify-content: space-between;
+                .notfication{
+                    top: -1px !important;
+                    right: 7px !important;
+                }
+                ul {
+                    background-color: brown;
+                    display: flex !important;
+                }
+            }
+        }
+    }
+
+}
+
+.dark-mode{
+        background-color: #333 !important;
+        color: #fff !important;    
+}
